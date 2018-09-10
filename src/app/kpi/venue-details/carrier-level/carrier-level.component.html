@@ -1,0 +1,274 @@
+<mat-card>
+    <mat-card-content>
+ <!-- lte Table -->
+ <h2>Venue: Faragout Field</h2>
+ <h2>Event: Team A VS Team B</h2>
+ <H3>LTE Table</H3>
+ <div class="mat-elevation-z8">
+    <table  mat-table [dataSource]="dataSource" matSort>
+    
+   
+    <!-- Tech Column -->
+    <ng-container matColumnDef="technology">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Technology </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.technology}} </td>
+      </ng-container>
+
+      <!-- carrier Column -->
+    <ng-container matColumnDef="carrier">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Carrier </th>
+        <td mat-cell *matCellDef="let row"> {{row.carrier}} </td>
+      </ng-container>
+
+      <!-- VoLTEAcc Column -->
+    <ng-container matColumnDef="volteacc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> VoLTE Acc </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.volteacc}}  <mat-icon aria-hidden="true" style="color:#e91e63">arrow_downward</mat-icon></td>
+      </ng-container>
+
+      <!-- VoLTERet Column -->
+    <ng-container matColumnDef="volteret">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> VoLTE Ret </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.volteret}} <mat-icon aria-hidden="true" style="color:rgb(65, 114, 16)">arrow_upward</mat-icon></td>
+      </ng-container>
+
+      <!-- PSAcc Column -->
+    <ng-container matColumnDef="psacc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Acc </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.psacc}}<mat-icon aria-hidden="true" style="color:#e91e63">arrow_downward</mat-icon></td>
+      </ng-container>
+
+      <!-- PSRet Column -->
+    <ng-container matColumnDef="psretain">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Ret </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.volteret}} <mat-icon aria-hidden="true" style="color:rgb(65, 114, 16)">arrow_upward</mat-icon></td>
+      </ng-container>
+
+      <!-- DL Vol Column -->
+    <ng-container matColumnDef="dlvol">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DL Vol </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.dlvol}} </td>
+      </ng-container>
+
+      <!-- UL Vol Column -->
+    <ng-container matColumnDef="ulvol">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> UL Vol </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.ulvol}} </td>
+      </ng-container>
+
+      <!-- VoLTE Att Column -->
+    <ng-container matColumnDef="volteatt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> VoLTE Att </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.volteatt}} </td>
+      </ng-container>
+
+      <!-- PS Att Column -->
+    <ng-container matColumnDef="psatt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Att </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.psatt}} </td>
+      </ng-container>
+
+      <!-- DL Tpt Column -->
+    <ng-container matColumnDef="dltpt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>DL TPT </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.dltpt}} </td>
+      </ng-container>
+
+      <!-- UL Tpt Column -->
+    <ng-container matColumnDef="ultpt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> UL TPT </th>
+        <td mat-cell *matCellDef="let row"> {{row.lteparams.ultpt}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="lteDisplayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: lteDisplayedColumns;"></tr>
+
+      </table>
+</div>
+<!-- table end --> 
+
+<!-- umts Table -->
+
+<H3>UMTS Table</H3>
+<div class="mat-elevation-z8">
+   <table  mat-table [dataSource]="dataSource" matSort>
+    
+   <!-- Tech Column -->
+   <ng-container matColumnDef="technology">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> Technology </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.technology}} </td>
+     </ng-container>
+
+     <!-- carrier Column -->
+   <ng-container matColumnDef="carrier">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> Carrier </th>
+       <td mat-cell *matCellDef="let row"> {{row.carrier}} </td>
+     </ng-container>
+
+     <!-- VoLTEAcc Column -->
+   <ng-container matColumnDef="csaccess">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> CS Acc </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.csaccess}}  <mat-icon aria-hidden="true" style="color:#e91e63">arrow_downward</mat-icon></td>
+     </ng-container>
+
+     <!-- VoLTERet Column -->
+   <ng-container matColumnDef="csretain">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> CS Ret </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.csretain}} <mat-icon aria-hidden="true" style="color:rgb(65, 114, 16)">arrow_upward</mat-icon></td>
+     </ng-container>
+
+     <!-- PSAcc Column -->
+   <ng-container matColumnDef="psacc">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Acc </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.psacc}}<mat-icon aria-hidden="true" style="color:#e91e63">arrow_downward</mat-icon></td>
+     </ng-container>
+
+     <!-- PSRet Column -->
+   <ng-container matColumnDef="psretain">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Ret </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.psretain}} <mat-icon aria-hidden="true" style="color:rgb(65, 114, 16)">arrow_upward</mat-icon></td>
+     </ng-container>
+
+     <!-- DL Vol Column -->
+   <ng-container matColumnDef="dlvol">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> DL Vol </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.dlvol}} </td>
+     </ng-container>
+
+     <!-- UL Vol Column -->
+   <ng-container matColumnDef="ulvol">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> UL Vol </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.ulvol}} </td>
+     </ng-container>
+
+     <!-- VoLTE Att Column -->
+   <ng-container matColumnDef="csatt">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> CS Att </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.csatt}} </td>
+     </ng-container>
+
+     <!-- PS Att Column -->
+   <ng-container matColumnDef="psatt">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Att </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.psatt}} </td>
+     </ng-container>
+
+     <!-- DL Tpt Column -->
+   <ng-container matColumnDef="dltpt">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header>DL TPT </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.dltpt}} </td>
+     </ng-container>
+
+     <!-- UL Tpt Column -->
+   <ng-container matColumnDef="ultpt">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> UL TPT </th>
+       <td mat-cell *matCellDef="let row"> {{row.umtsparams.ultpt}} </td>
+     </ng-container>
+
+     <tr mat-header-row *matHeaderRowDef="umtsDisplayedColumns"></tr>
+     <tr mat-row *matRowDef="let row; columns: umtsDisplayedColumns;"></tr>
+
+     </table> 
+</div>
+<!-- table end -->
+
+<!--charts-->
+<div class="column" style="width: 33%"> 
+      
+    <h1>
+        UL Vol
+        </h1>
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [datasets]="chartData2"
+      [labels]="labelspie"
+      [options]="chartOptions"
+      [legend]="true"
+      [colors]="colors"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+
+</div>
+<div class="column" style="width: 33%"> 
+      
+    <h1>
+        DL Vol
+        </h1>
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [datasets]="chartData2"
+      [labels]="labelspie"
+      [options]="chartOptions"
+      [legend]="true"
+      [colors]="colors"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+
+</div>
+<!-- pie chart -->
+<div class="columnpie" style="width: 33%"> 
+      
+    <h1>
+        QAM Usage
+        </h1>
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [datasets]="chartData2"
+      [labels]="labelspie"
+      [options]="chartOptions"
+      [legend]="true"
+      [colors]="colors"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+
+</div>
+<!-- chart end -->
+
+<!-- chart 2 -->
+<div class="cloumnpie" style="width: 33%">
+
+    <h1>
+        MIMO Usage
+        </h1>
+    
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [datasets]="chartData2"
+      [labels]="labelspie"
+      [options]="chartOptions"
+      [legend]="true"
+      [colors]="colors"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+
+<!-- chart end -->
+</div> 
+
+<!-- chart 2 -->
+<div class="cloumnpie" style="width: 33%">
+
+    <h1>
+        CA Usage
+        </h1>
+    
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [datasets]="chartData2"
+      [labels]="labelspie"
+      [options]="chartOptions"
+      [legend]="true"
+      [colors]="colors"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+
+<!-- chart end -->
+</div> 
+
+<!-- end chart -->
+    </mat-card-content>
+</mat-card>      

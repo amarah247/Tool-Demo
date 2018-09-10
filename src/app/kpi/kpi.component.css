@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+    font-family: Poppins, sans-serif;
+  }
+  
+mat-header-cell {
+    display: flex;
+    justify-content:flex-end;
+    
+   }
+th.mat-header-cell{
+    background-color: #26c6da;
+    color: #ffffff;
+    font-family: Poppins, sans-serif;
+}
